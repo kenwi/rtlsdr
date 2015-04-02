@@ -4,3 +4,7 @@
 # Images
 *.png
 *.bmp
+
+tools/Vera.ttf
+tools/sync_data.sh
+
