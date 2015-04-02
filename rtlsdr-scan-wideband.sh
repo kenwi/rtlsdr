@@ -11,4 +11,6 @@ INTERVAL=100
 
 DESTINATION=/mnt/hv01/rtlsdr/current/data/node-0.csv
 
+echo "Saving to $DESTINATION"
+echo ""
 sudo rtl_power -i $INTERVAL -d $DEVICE_ID -f $START:$STOP:$RESOLUTION -g $GAIN $DESTINATION
