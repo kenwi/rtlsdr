@@ -7,13 +7,7 @@ Files from my work with rtl-sdr. Adding nodes and functionality as I go.
 * http://kmkeen.com/tmp/heatmap.py.txt
 * A rtl-sdr dongle. Go buy one. 
 
-# Crontab
-I've got a directory named `rtlsdr` in my home directory:
-
-	$SDR=rtlsdr
-	* * * * * $HOME/$SDR/heatmap.py $HOME/$SDR/current/data/node-0.csv $HOME/$SDR/current/node-0.png
-
-# Usage:
+# Collect wideband  data:
 
 	~/rtlsdr $ ./rtlsdr-scan-wideband.sh 
 	Found 1 device(s):
@@ -32,3 +26,16 @@ I've got a directory named `rtlsdr` in my home directory:
 	Found Rafael Micro R820T tuner
 	Tuner gain set to 49.60 dB.
 	Exact sample rate is: 2796747.255507 Hz
+
+# Generate heatmap:
+
+	~/rtlsdr$ time ./rtlsdr-generate-wideband.sh
+	loading
+	x: 4920, y: 3, z: (-30.940000, 15.430000)
+	drawing
+	labeling
+	saving
+
+	real    0m1.430s
+	user    0m1.361s
+	sys     0m0.050s
