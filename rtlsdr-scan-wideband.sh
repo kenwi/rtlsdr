@@ -1,10 +1,14 @@
 #!/bin/sh
 
 DEVICE_ID=0
+
 START=30M
 STOP=1750M
+
 RESOLUTION=500k
 GAIN=50
-OUTFILE=node-0.txt # not working now.
+INTERVAL=100
 
-rtl_power -d $DEVICE_ID -f $START:$STOP:$RESOLUTION -g $GAIN ~/rtlsdr/current/data/node-0.csv
+DESTINATION=/mnt/hv01/rtlsdr/current/data/node-0.csv
+
+sudo rtl_power -i $INTERVAL -d $DEVICE_ID -f $START:$STOP:$RESOLUTION -g $GAIN $DESTINATION
