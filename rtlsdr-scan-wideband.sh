@@ -1,9 +1,9 @@
 #!/bin/sh
 
-$device_id=0
-$start=30M
-$stop=1750M
-$resolution=500k
-$gain=40
+DEVICE_ID=0
+START=30M
+STOP=1750M
+RESOLUTION=500k
+GAIN=40
 
-rtl_power -d $device_id -f $start:$stop:$resolution -g $gain ~/current/data/node-0.csv
+rtl_power -d $DEVICE_ID -f $START:$STOP:$RESOLUTION -g $GAIN ~/rtlsdr/current/data/node-0.csv
